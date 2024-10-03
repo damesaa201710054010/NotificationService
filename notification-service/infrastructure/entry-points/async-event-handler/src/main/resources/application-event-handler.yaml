@@ -1,0 +1,19 @@
+spring:
+  rabbitmq:
+    host: 'localhost'
+    port: 5673
+    username: 'guest'
+    password: 'guest'
+    ssl:
+      enabled: false
+app:
+  async:
+    domain:
+      events:
+        exchange: 'nsync'
+        maxLengthBytes: 125000000
+        retry:
+          maxAttempts: 3
+          initialInterval: 1000
+          multiplier: 1.5
+          maxInterval: 10000

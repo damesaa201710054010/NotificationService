@@ -1,0 +1,53 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "NotificationService"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include:
+      - rest
+      - event-handler
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: "error"
+        internal:
+          InstanceMetadataServiceResourceFetcher: "error"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health, loggers, info"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    loggers:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  health:
+    circuitbreakers:
+      enabled: true
+info:
+  app:
+    name: "Notification Service"
+    version: "1.0.0"
+    build: "1"
+    environment: "development"
+adapter:
+  restconsumer:
+    timeout: 5000
+    url: "http://localhost:8080"

@@ -1,0 +1,5 @@
+sendgrid:
+  connection:
+    url: https://api.sendgrid.com/v3
+    api_key: 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
+    timeout: 3000
