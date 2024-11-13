@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+  namespace: nsync
+  labels:
+    app: notification
+    app.kubernetes.io/part-of: notification
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      containers:
+        - image: #IMAGE#
+          imagePullPolicy: Always
+          name: notification-service
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+          resources:
+            requests:
+              memory: "300Mi"
+              cpu: "300m"
+            limits:
+              memory: "600Mi"
+              cpu: "600m"
+          startupProbe:
+            httpGet:
+              path: /actuator
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 30
+            failureThreshold: 10
+          readinessProbe:
+            httpGet:
+              path: /actuator
+              port: http
+            initialDelaySeconds: 15
+            failureThreshold: 6
+            periodSeconds: 15
+            timeoutSeconds: 30
+          livenessProbe:
+            httpGet:
+              path: /actuator
+              port: http
+            initialDelaySeconds: 15
+            failureThreshold: 1
+            periodSeconds: 15
+            timeoutSeconds: 30

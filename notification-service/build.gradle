@@ -36,7 +36,7 @@ sonar {
 }
 cleanPlugin {
     modelProps {
-        whitelistedDependencies = "gson, jackson-datatype-jsr310, jackson-dataformat-xml, jackson-databind, log4j-api, log4j-core, spring-context, netty-resolver-dns-native-macos, netty-all"
+        whitelistedDependencies = "spring-boot-starter-log4j2, spring-boot-starter-amqp, reactive-commons, gson, jackson-datatype-jsr310, jackson-dataformat-xml, jackson-databind, log4j-api, log4j-core, spring-context, netty-resolver-dns-native-macos, netty-all"
     }
 }
 

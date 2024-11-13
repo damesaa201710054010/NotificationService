@@ -1,5 +1,11 @@
 sendgrid:
   connection:
     url: https://api.sendgrid.com/v3
-    api_key: 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
+    api_key: #{sendgrid.api_key}
     timeout: 3000
+user:
+  connection:
+    url: #{user.url}
+doc:
+  connection:
+    url: #{doc.url}

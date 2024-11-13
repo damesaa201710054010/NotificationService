@@ -2,14 +2,12 @@ package co.com.distributed.consumer.config;
 
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.WriteTimeoutHandler;
-//import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.reactive.ClientHttpConnector;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
-import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.client.HttpClient;
 
@@ -21,13 +19,13 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 public class RestConsumerConfig {
 
     @Value("${sendgrid.connection.url}")
-    private String url; //= "https://api.sendgrid.com/v3";
+    private String url;
 
     @Value("${sendgrid.connection.api_key}")
-    private String API_KEY; //= "LEPLJ7PGGUNTTNMZD9JT95V2";
+    private String API_KEY;
 
     @Value("${sendgrid.connection.timeout}")
-    private int timeout; //= 3000;
+    private int timeout;
 
     @Bean
     public WebClient getWebClient() {
@@ -38,6 +36,7 @@ public class RestConsumerConfig {
                 .clientConnector(getClientHttpConnector())
                 .build();
     }
+
 
     private ClientHttpConnector getClientHttpConnector() {
 

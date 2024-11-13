@@ -17,7 +17,7 @@ public class RestConsumer implements INotificationEventRepository {
     //private static final long RETRIES = 3L;
 
     @Override
-    public Mono<NotificationEvent> publishEmail(NotificationEvent event, String userEmail) {
+    public Mono<Boolean> publishEmail(NotificationEvent event, String userEmail) {
         return client.post()
                 .uri("/mail/send")
                 .header("Content-Type", "application/json")
@@ -28,8 +28,13 @@ public class RestConsumer implements INotificationEventRepository {
                                 "\"content\": [{ \"type\": \"text/plain\", \"value\": \"" + event.getContent() + "\" }] }"))
                 .retrieve()
                 .bodyToMono(String.class)
+                .flatMap(response -> {
+                    System.out.println("Correo enviado: " + userEmail);
+                    log.info("Correo enviado: {}", userEmail);
+                    log.info("Correo enviado: {}", response);
+                    return Mono.just(true);
+                })
                 .log()
-                .onErrorReturn("Error al enviar el correo.")
-                .then(Mono.just(event)).log();
+                .then(Mono.just(true)).log();
     }
 }

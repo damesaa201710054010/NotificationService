@@ -11,8 +11,8 @@ spring:
       path: "/h2"
   profiles:
     include:
-      - rest
-      - event-handler
+    - "event-handler"
+    - "rest"
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
@@ -28,7 +28,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "health, loggers, info"
+        include: "health,prometheus"
   info:
     env:
       enabled: true
@@ -51,3 +51,26 @@ adapter:
   restconsumer:
     timeout: 5000
     url: "http://localhost:8080"
+resilience4j:
+  circuitbreaker:
+    instances:
+      testGet:
+        registerHealthIndicator: true
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: "2s"
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 10
+        waitDurationInOpenState: "10s"
+      testPost:
+        registerHealthIndicator: true
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: "2s"
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 10
+        waitDurationInOpenState: "10s"
+cors:
+  allowed-origins: "http://localhost:4200,http://localhost:8080"

@@ -1,16 +1,19 @@
 spring:
   rabbitmq:
-    host: 'localhost'
-    port: 5673
-    username: 'guest'
-    password: 'guest'
+    host: '#{RABBITMQ_HOST}'
+    port: #{RABBITMQ_PORT}
+    username: '#{RABBITMQ_USER}'
+    password: '#{RABBITMQ_PASSWORD}'
     ssl:
       enabled: false
+
 app:
   async:
+    withDLQRetry: true
+    createTopology: false
     domain:
       events:
-        exchange: 'nsync'
+        exchange: #{EVENT_EXCHANGE}
         maxLengthBytes: 125000000
         retry:
           maxAttempts: 3

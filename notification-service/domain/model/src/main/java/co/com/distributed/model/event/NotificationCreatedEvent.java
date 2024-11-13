@@ -11,4 +11,5 @@ import lombok.*;
 public class NotificationCreatedEvent {
     private String userEmail;
     private String eventType;
+    private String userId;
 }

@@ -6,11 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-@Configuration
 @Component
+@Configuration
 public class HandlerRegistryConfiguration {
 
-    // see more at: https://reactivecommons.org/reactive-commons-java/#_handlerregistry_2
     @Bean
     public HandlerRegistry handlerRegistry(EventsHandler events) {
         return HandlerRegistry.register()

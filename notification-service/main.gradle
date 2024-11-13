@@ -49,8 +49,14 @@ subprojects {
         implementation "com.google.code.gson:gson:${gsonVersion}"
         implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1'
         implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+        // Dependencia para Reactive Commons (asegúrate de usar una versión válida)
+//        implementation 'org.reactivecommons:reactive-commons:1.1.0'
+//
+//        // Otras dependencias necesarias
+//        implementation 'org.springframework.boot:spring-boot-starter-amqp'
+//        implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 //        implementation 'org.reactivecommons:reactivecommons-async:1.0.0'
-//        implementation 'org.reactivecommons:reactivecommons-api:1.0.0'
+ //       implementation 'org.reactivecommons:reactivecommons-api:1.0.0'
     }
     dependencyManagement {
         imports {

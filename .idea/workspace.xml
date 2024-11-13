@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4fbcb07c-b2fc-494b-9989-daee73199d0f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/notification-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/deployment/templates/blue-green-templates/deployment-master.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/deployment/templates/blue-green-templates/hpa-master.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/deployment/templates/blue-green-templates/service-master.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/documentData/DocumentData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/documentData/gateways/IDocumentData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/userdata/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/userdata/gateways/IUserDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/domain/usecase/src/main/java/co/com/distributed/usecase/document/DocumentPutUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/domain/usecase/src/main/java/co/com/distributed/usecase/notifications/SendEmailNotificationUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/domain/usecase/src/main/java/co/com/distributed/usecase/userdata/GetUserDataUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/distributed/consumer/DocumentAposConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/distributed/consumer/UserConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/api-rest/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/api-rest/src/main/java/co/com/distributed/api/ApiRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NotificationService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/applications/app-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/applications/app-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/applications/app-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/applications/app-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/deployment/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/event/NotificationCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/event/NotificationCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/notificationevent/NotificationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/notificationevent/NotificationEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/notificationevent/gateways/INotificationEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/domain/model/src/main/java/co/com/distributed/model/notificationevent/gateways/INotificationEventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/domain/usecase/src/main/java/co/com/distributed/usecase/notifications/SendEmailNotification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/distributed/consumer/RestConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/distributed/consumer/RestConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/distributed/consumer/config/RestConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/distributed/consumer/config/RestConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/resources/application-rest.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/main/resources/application-rest.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/driven-adapters/rest-consumer/src/test/java/co/com/distributed/consumer/RestConsumerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/main/java/co/com/distributed/events/HandlerRegistryConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/main/java/co/com/distributed/events/HandlerRegistryConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/main/java/co/com/distributed/events/handlers/EventsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/main/java/co/com/distributed/events/handlers/EventsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/main/resources/application-event-handler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/main/resources/application-event-handler.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/test/java/co/com/distributed/events/HandlerRegistryConfigurationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/test/java/co/com/distributed/events/handlers/CommandsHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/test/java/co/com/distributed/events/handlers/EventsHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/test/java/co/com/distributed/events/handlers/QueriesHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/infrastructure/entry-points/async-event-handler/src/test/java/co/com/distributed/events/metrics/MetricsReporterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/main.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/main.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/scaffold-quick-start">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2mhnEzEvaQ3oNb88ERC0d0yIoUp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle./Users/danielmesa/Documents/EAFIT/software_development/Ing_Sistemas_Distribuidos/repositories.tmp/NotificationService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;trunk&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/danielmesa/Documents/EAFIT/software_development/Ing_Sistemas_Distribuidos/repositories.tmp/NotificationService&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notification-service/applications/app-service/build/libs" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle clean" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="/Users/danielmesa/Documents/EAFIT/software_development/Ing_Sistemas_Distribuidos/repositories.tmp/NotificationService [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle./Users/danielmesa/Documents/EAFIT/software_development/Ing_Sistemas_Distribuidos/repositories.tmp/NotificationService [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fbcb07c-b2fc-494b-9989-daee73199d0f" name="Changes" comment="" />
+      <created>1727537567371</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727537567371</updated>
+      <workItem from="1727537568401" duration="707000" />
+      <workItem from="1727538648408" duration="80000" />
+      <workItem from="1731463035846" duration="649000" />
+      <workItem from="1731463692423" duration="121000" />
+      <workItem from="1731463832571" duration="56000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

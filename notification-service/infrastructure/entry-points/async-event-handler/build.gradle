@@ -1,9 +1,9 @@
 dependencies {
     implementation project(':model')
     implementation project(':usecase')
-    implementation 'org.reactivecommons:async-commons-rabbit-starter:2.0.0'
+    implementation 'org.reactivecommons:async-commons-rabbit-starter:5.0.0-alpha'
     implementation 'org.springframework:spring-context'
-    implementation "org.reactivecommons:async-rabbit:2.0.0"
+    implementation "org.reactivecommons:async-rabbit:5.0.0-alpha"
     implementation 'com.rabbitmq:amqp-client:5.20.0'
-    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    // otras
 }
